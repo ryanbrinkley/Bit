@@ -48,28 +48,28 @@ void discover(int dir, int row, int col){
 	isWall(row,col);
 	if(ryan[row][col].noWallE && 
 	ryan[row][col].opening && 
-	!(dir & WEST)) {
+	!(dir & EAST)) {
 	        ryan[row][col].opening >> 1;
 		move(EAST);
 		discover(WEST, ++row,col);
 	}
 	if(ryan[row][col].noWallN && 
 	ryan[row][col].opening && 
-	!(dir & SOUTH)) {
+	!(dir & NORTH)) {
 		ryan[row][col].opening >> 1;
 		move(NORTH);
 		discover(SOUTH, row,++col);
 	}
 	if(ryan[row][col].noWallW && 
 	ryan[row][col].opening && 
-	!(dir & EAST)) {
+	!(dir & WEST)) {
 		ryan[row][col].opening >> 1;
 		move(WEST);
 		discover(EAST, --row,col);	
 	}
 	if(ryan[row][col].noWallS && 
 	ryan[row][col].opening && 
-	!(dir & NORTH)) {
+	!(dir & SOUTH)) {
 		ryan[row][col].opening >> 1;
 		move(SOUTH);
 		discover(NORTH, row,--col);
@@ -118,3 +118,4 @@ discover(0, 3,4);
 
 return 0;
 }
+
