@@ -7,7 +7,7 @@
 #define ONE_DIR		0x01
 #define NO_DIR		0x00
 
-#define NORTH		0         //		0
+#define NORTH		0         	  //		0
 #define SOUTH		2		  //	3		1
 #define EAST		1		  //		2				 
 #define WEST		3
